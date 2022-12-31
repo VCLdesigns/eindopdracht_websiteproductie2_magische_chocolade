@@ -3,46 +3,38 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'caveat';
-    src: url('../fonts/caveat-regular-webfont.eot');
-    src: url('../fonts/caveat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/caveat-regular-webfont.woff2') format('woff2'),
-        url('../fonts/caveat-regular-webfont.woff') format('woff'),
-        url('../fonts/caveat-regular-webfont.ttf') format('truetype'),
-        url('../fonts/caveat-regular-webfont.svg#caveatregular') format('svg');
+    font-family: 'wizards_magicregular';
+    src: url('../fonts/wizards_magic-webfont.eot');
+    src: url('../fonts/wizards_magic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/wizards_magic-webfont.woff2') format('woff2'),
+        url('../fonts/wizards_magic-webfont.woff') format('woff'),
+        url('../fonts/wizards_magic-webfont.ttf') format('truetype'),
+        url('../fonts/wizards_magic-webfont.svg#wizards_magicregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
-@font-face {
-    font-family: 'josefin_sans';
-    src: url('../fonts/josefinsans-regular-webfont.eot');
-    src: url('../fonts/josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/josefinsans-regular-webfont.woff2') format('woff2'),
-        url('../fonts/josefinsans-regular-webfont.woff') format('woff'),
-        url('../fonts/josefinsans-regular-webfont.ttf') format('truetype'),
-        url('../fonts/josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
+
 
 @font-face {
-    font-family: 'montserrat';
-    src: url('../fonts/montserrat-regular-webfont.eot');
-    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
-        url('../fonts/montserrat-regular-webfont.woff') format('woff'),
-        url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
-        url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-family: 'kingthings_exeterregular';
+    src: url('../fonts/kingthings_exeter-webfont.eot');
+    src: url('../fonts/kingthings_exeter-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/kingthings_exeter-webfont.woff2') format('woff2'),
+        url('../fonts/kingthings_exeter-webfont.woff') format('woff'),
+        url('../fonts/kingthings_exeter-webfont.ttf') format('truetype'),
+        url('../fonts/kingthings_exeter-webfont.svg#kingthings_exeterregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
 /* Variabelen*/
 :root {
-    --font_titel: 'caveat', georgia, serif;
-    --font_subtitel: 'josefin_sans', arial, sans-serif;
-    --font_teksten: 'montserrat', verdana, sans-serif;
+    --font_titel: 'wizards_magicregular', georgia, serif;
+    --font_teksten: 'kingthings_exeterregular', verdana, sans-serif;
     --kleur_wit: #fcf5e5;
     --kleur_zwart: #06080f;
     --kleur_blauw: #0422bf;
@@ -72,10 +64,20 @@ body {
     line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font_titel);
+}
+
 img {
     display: block;
 }
 
-header, footer{
-	background-color:var(--kleur_blauw);
+header,
+footer {
+    background-color: var(--kleur_blauw);
 }
