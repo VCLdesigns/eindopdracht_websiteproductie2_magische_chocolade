@@ -37,7 +37,7 @@
     --font_teksten: 'kingthings_exeterregular', verdana, sans-serif;
     --kleur_wit: #fcf5e5;
     --kleur_zwart: #06080f;
-    --kleur_blauw: #0422bf;
+    --kleur_blauw: rgb(4, 34, 191);
 }
 
 /* Standaard */
@@ -78,6 +78,110 @@ img {
     width: 100%;
     height: auto;
 }
+
 footer {
     background-color: var(--kleur_blauw);
 }
+
+/*
+    Algemeen
+    Les 5 - Typo 
+    les 8 - Teksten stijlen
+    h1: Les 9 - Teksten als masker
+*/
+
+/*
+    Menu
+    Les 6 - Multiple Backgrounds
+    Les 9 - Mix blend mode ->Toverspreuk-knop
+
+/*
+    Call to action
+    Les 6 - Backgrounds + les 9 - Background blend mode
+/*
+    Index Pagina
+    Tweede menu: Les 2 - Positioning
+*/
+
+/*
+    About Pagina
+    Alle h's: Les 4 - ::before & :: after
+
+/* 
+    Producten Pagina 
+    Kunst: Les 1 - Flex-box + Les 9 - Filters
+    Pralines: Les 7 - Masonry
+*/
+#chocolade_kunst_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.chocolade_kunst_box {
+    width: 40%;
+}
+
+#pralines_container {
+    margin: 10rem auto;
+
+}
+
+.pralines_box img {
+    max-width: 800px;
+}
+
+.grid-sizer,
+.grid-item {
+    float: left;
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+.grid-item--width2 {
+    width: 25%;
+}
+
+.pralines_box {
+    position: relative;
+    overflow: hidden;
+}
+.pralines_box:hover > .praline_overlay{
+    transform: translateX(0);
+}
+
+.praline_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    background-color: rgba(4, 34, 191, 0.4);
+    color: var(--kleur_wit);
+    transform: translateX(100%);
+    transition: transform 0.3s linear;
+}
+.praline_overlay h4{
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+
+
+/*
+    Contact Pagina
+    les 5 - Fontello icons
+*/
+
+/*
+    Footer
+    Algemeen Design: Les 3 - CSS effecten
+    Socials: Les 9 - Vormen als masker
+*/
