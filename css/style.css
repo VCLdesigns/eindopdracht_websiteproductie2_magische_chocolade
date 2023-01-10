@@ -3,38 +3,39 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'wizards_magicregular';
-    src: url('../fonts/wizards_magic-webfont.eot');
-    src: url('../fonts/wizards_magic-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/wizards_magic-webfont.woff2') format('woff2'),
-        url('../fonts/wizards_magic-webfont.woff') format('woff'),
-        url('../fonts/wizards_magic-webfont.ttf') format('truetype'),
-        url('../fonts/wizards_magic-webfont.svg#wizards_magicregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "wizards_magicregular";
+  src: url("../fonts/wizards_magic-webfont.eot");
+  src: url("../fonts/wizards_magic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/wizards_magic-webfont.woff2") format("woff2"),
+    url("../fonts/wizards_magic-webfont.woff") format("woff"),
+    url("../fonts/wizards_magic-webfont.ttf") format("truetype"),
+    url("../fonts/wizards_magic-webfont.svg#wizards_magicregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'kingthings_exeterregular';
-    src: url('../fonts/kingthings_exeter-webfont.eot');
-    src: url('../fonts/kingthings_exeter-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/kingthings_exeter-webfont.woff2') format('woff2'),
-        url('../fonts/kingthings_exeter-webfont.woff') format('woff'),
-        url('../fonts/kingthings_exeter-webfont.ttf') format('truetype'),
-        url('../fonts/kingthings_exeter-webfont.svg#kingthings_exeterregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "kingthings_exeterregular";
+  src: url("../fonts/kingthings_exeter-webfont.eot");
+  src: url("../fonts/kingthings_exeter-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/kingthings_exeter-webfont.woff2") format("woff2"),
+    url("../fonts/kingthings_exeter-webfont.woff") format("woff"),
+    url("../fonts/kingthings_exeter-webfont.ttf") format("truetype"),
+    url("../fonts/kingthings_exeter-webfont.svg#kingthings_exeterregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Variabelen*/
 :root {
-    --font_titel: 'wizards_magicregular', georgia, serif;
-    --font_teksten: 'kingthings_exeterregular', verdana, sans-serif;
-    --kleur_wit: #fcf5e5;
-    --kleur_zwart: #06080f;
-    --kleur_blauw: #0422bf;
+  --font_titel: "wizards_magicregular", georgia, serif;
+  --font_teksten: "kingthings_exeterregular", verdana, sans-serif;
+  --kleur_wit: #fcf5e5;
+  --kleur_zwart: #06080f;
+  --kleur_blauw: #0422bf;
 }
 
 /* Standaard */
@@ -42,27 +43,27 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--kleur_wit);
-    min-height: 100%;
-    font-family: var(--font_teksten);
-    font-size: 2rem;
-    color: var(--kleur_zwart);
-    line-height: 1.5;
+  background-color: var(--kleur_wit);
+  min-height: 100%;
+  font-family: var(--font_teksten);
+  font-size: 2rem;
+  color: var(--kleur_zwart);
+  line-height: 1.5;
 }
-main{
-    max-width: 1200px;
-    margin: 0 auto;
+main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h1,
@@ -71,72 +72,53 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font_titel);
+  font-family: var(--font_titel);
 }
 
 h1 {
-    font-size: 10rem;
-    text-align: center;
-    font-weight: 800;
-    text-shadow: 0 2px 1px #747474,
-        -1px 3px 1px #767676,
-        -2px 5px 1px #787878,
-        -3px 7px 1px #7a7a7a,
-        -4px 9px 1px #7f7f7f,
-        -5px 11px 1px #838383,
-        -6px 13px 1px #878787,
-        -7px 15px 1px #8a8a8a,
-        -8px 17px 1px #8e8e8e,
-        -9px 19px 1px #949494,
-        -10px 21px 1px #989898,
-        -11px 23px 1px #9f9f9f,
-        -12px 25px 1px #a2a2a2,
-        -13px 27px 1px #a7a7a7,
-        -14px 29px 1px #adadad,
-        -15px 31px 1px #b3b3b3,
-        -16px 33px 1px #b6b6b6,
-        -17px 35px 1px #bcbcbc,
-        -18px 37px 1px #c2c2c2,
-        -19px 39px 1px #c8c8c8,
-        -20px 41px 1px #cbcbcb,
-        -21px 43px 1px #d2d2d2,
-        -22px 45px 1px #d5d5d5,
-        -23px 47px 1px #e2e2e2,
-        -24px 49px 1px #e6e6e6,
-        -25px 51px 1px #eaeaea,
-        -26px 53px 1px #efefef;
-        padding-bottom: 5rem;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878,
+    -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f, -5px 11px 1px #838383,
+    -6px 13px 1px #878787, -7px 15px 1px #8a8a8a, -8px 17px 1px #8e8e8e,
+    -9px 19px 1px #949494, -10px 21px 1px #989898, -11px 23px 1px #9f9f9f,
+    -12px 25px 1px #a2a2a2, -13px 27px 1px #a7a7a7, -14px 29px 1px #adadad,
+    -15px 31px 1px #b3b3b3, -16px 33px 1px #b6b6b6, -17px 35px 1px #bcbcbc,
+    -18px 37px 1px #c2c2c2, -19px 39px 1px #c8c8c8, -20px 41px 1px #cbcbcb,
+    -21px 43px 1px #d2d2d2, -22px 45px 1px #d5d5d5, -23px 47px 1px #e2e2e2,
+    -24px 49px 1px #e6e6e6, -25px 51px 1px #eaeaea, -26px 53px 1px #efefef;
+  padding-bottom: 5rem;
 }
 
-
 h2 {
-    font-size: 6rem;
-    text-align: center;
+  font-size: 6rem;
+  text-align: center;
 }
 
 h3 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 h4 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h5 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h6 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 /*
@@ -149,143 +131,101 @@ ul{
 /*
     Menu
     Les 6 - Multiple Backgrounds
-    Les 9 - Mix blend mode ->Toverspreuk-knop
 */
 
 header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-    border-bottom: var(--kleur_blauw) outset 1rem;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
 
+    margin-bottom: 5rem;
+  border-bottom: var(--kleur_blauw) outset 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#header_content{
+    display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 header img {
-    width: 100%;
-    max-width: 600px;
-}
-
-#blend_mode_container {
-    position: relative;
-    display: block;
-    width: 200px;
-    height: 400px;
-}
-
-#blend_mode_container::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: -122px;
-    display: block;
-    width: 200px;
-    height: 400px;
-    background-image: url(../img/wizard1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top left;
-}
-
-#blend_mode_container h5 {
-    position: absolute;
-    top: 75px;
-    left: 50px;
-}
-
-#blend_mode_container form {
-    position: absolute;
-    top: 110px;
-    left: 60px;
-}
-
-select {
-    font-family: var(--font_teksten);
-    padding: 0.2rem;
-    border-radius: 0.8rem;
-    color: var(--kleur_wit);
-    background-color: var(--kleur_blauw);
-}
-
-.image{
-    background-color: var(--kleur_blauw);
+  width: 100%;
+  max-width: 600px;
 }
 
 #nav {
-    position: relative;
+  position: relative;
 }
 
 #nav::after {
-    content: "";
-    position: absolute;
-    top: 32px;
-    right: -154px;
-    display: block;
-    width: 200px;
-    height: 400px;
-    background-image: url(../img/wizard2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top left;
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: -154px;
+  display: block;
+  width: 200px;
+  height: 400px;
+  background-image: url(../img/wizard2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
 }
 
 #nav_links a {
-    display: block;
-    width: 600px;
-    height: auto;
-    border: var(--kleur_blauw) inset 0.5rem;
-    outline: var(--kleur_blauw) outset 0.5rem;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    margin: 2rem;
-    color: var(--kleur_blauw);
-    text-shadow: -1px -1px 0px rgb(38, 57, 77);
-    text-decoration: none;
-    font-size: 4rem;
-    line-height: 4rem;
-    letter-spacing: 0.5rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 1rem;
+  display: block;
+  width: 400px;
+  height: auto;
+  border: var(--kleur_blauw) inset 0.5rem;
+  outline: var(--kleur_blauw) outset 0.5rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 2rem;
+  color: var(--kleur_blauw);
+  text-shadow: -1px -1px 0px rgb(38, 57, 77);
+  text-decoration: none;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
 }
 
 #nav_links a:nth-of-type(1) {
-    background: url(../img/arcane_circle.png), url(../img/arcane_circle.png);
-    background-position: 20%, 80%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+  background: url(../img/arcane_circle.png), url(../img/arcane_circle.png);
+  background-position: 0%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(2) {
-    background: url(../img/arcane_circle2.png), url(../img/arcane_circle2.png);
-    background-position: 10%, 90%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+  background: url(../img/arcane_circle2.png), url(../img/arcane_circle2.png);
+  background-position: 5%, 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(3) {
-    background: url(../img/arcane_circle3.png), url(../img/arcane_circle3.png);
-    background-position: 20%, 80%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+  background: url(../img/arcane_circle3.png), url(../img/arcane_circle3.png);
+  background-position: 10%, 90%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(4) {
-    background: url(../img/arcane_circle4.png), url(../img/arcane_circle4.png);
-    background-position: 10%, 90%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+  background: url(../img/arcane_circle4.png), url(../img/arcane_circle4.png);
+  background-position: 15%, 85%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
 }
 
 #nav_links a:hover {
-    font-size: 4.5rem;
-    color: #4f64d2;
-    background: url(../img/arcane_effect2.png), url(../img/arcane_effect2.png);
-    background-position: 25%, 75%;
-    background-size: contain, contain;
-    background-repeat: no-repeat;
-
+  font-size: 4.5rem;
+  color: #4f64d2;
+  background: url(../img/arcane_effect2.png), url(../img/arcane_effect2.png);
+  background-position: 10%, 90%;
+  background-size: contain, contain;
+  background-repeat: no-repeat;
 }
-
 
 /*
     Call to action
@@ -305,121 +245,199 @@ select {
 
 /*
     Producten Pagina 
-    Kunst: Les 1 - Flex-box + Les 9 - Filters
-    Pralines: Les 7 - Masonry
+    Kunst: Les 1 - Flex-box 
+     Les 9 - Mix blend mode ->Toverspreuk-knop
+    Pralines: Les 7 - Masonry + Les 9 - Filters
 */
+
 #chocolade_kunst_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 10rem;
 }
-.background{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--kleur_blauw);
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--kleur_blauw);
 }
 .chocolade_kunst_box {
-    position: relative;
-    display: block;
-    width: 300px;
-    height: 200px;
-    margin: 1rem;
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 1rem;
 }
-#arnoud{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst.jpg);
+#arnoud {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst.jpg);
 }
-#ariel{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst2.jpg);
+#ariel {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst2.jpg);
 }
-#aurore{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst3.jpg);
+#aurore {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst3.jpg);
 }
-#arno{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst4.jpg);
+#arno {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst4.jpg);
 }
-#arnica{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst5.jpg);
+#arnica {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst5.jpg);
 }
-#azis{
-    background-image: url(../img/chocolade_fotos/chocolade_kunst6.jpg);
+#azis {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst6.jpg);
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+.chocolade_kunst_box:hover > .chocolade_kunst_overlay {
+  transform: scale(1);
+}
+.chocolade_kunst_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: var(--kleur_wit);
+  background-color: rgba(4, 34, 191, 0.4);
+  transform: scale(0);
+  transition: transform 0.3s linear;
+}
+.chocolade_kunst_overlay h6 {
+  padding-top: 2rem;
+}
+.chocolade_kunst_overlay p {
+  padding-top: 2rem;
 }
 
-.chocolade_kunst_box:hover > .chocolade_kunst_overlay{
-    transform: scale(1);
+#blend_mode_container {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 400px;
 }
-.chocolade_kunst_overlay{
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-text-align: center;
-background-color: rgba(4, 34, 191, 0.8);
-transform: scale(0);
-transition: transform 0.3s linear;
+
+#blend_mode_container::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -122px;
+  display: block;
+  width: 200px;
+  height: 400px;
+  background-image: url(../img/wizard1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
 }
-.chocolade_kunst_overlay h6{
-    padding-top: 2rem;
+
+#blend_mode_container h5 {
+  position: absolute;
+  top: 75px;
+  left: 50px;
 }
-.chocolade_kunst_overlay p{
-    padding-top: 2rem;
+
+#blend_mode_container form {
+  position: absolute;
+  top: 120px;
+  left: 60px;
 }
+
+select {
+  font-family: var(--font_teksten);
+  padding: 0.2rem;
+  border-radius: 0.8rem;
+  color: var(--kleur_wit);
+  background-color: var(--kleur_blauw);
+}
+
+.image {
+  background-color: var(--kleur_blauw);
+}
+
 #pralines_container {
-    margin: 10rem auto;
-
+  margin: 10rem auto;
 }
 
-.pralines_box img {
-    max-width: 800px;
-}
 
-.grid-sizer,
 .grid-item {
-    float: left;
-    width: 20%;
-    margin-bottom: 10px;
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .grid-item--width2 {
-    width: 25%;
+  width: 600px;
 }
 
 .pralines_box {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Brujah{
+    background-image: url(../img/chocolade_fotos/praline_balletje.jpg);
+}
+#Betunia{
+    background-image: url(../img/chocolade_fotos/praline_cocos.jpg);
+}
+#Brutus{
+    background-image: url(../img/chocolade_fotos/praline_rond.jpg);
+}
+#Berthe{
+    background-image: url(../img/chocolade_fotos/pralines.jpg);
+}
+#Begonia{
+    background-image: url(../img/chocolade_fotos/pralines3.jpg);
+}
+#Bokai{
+    background-image: url(../img/chocolade_fotos/pralines4.jpg);
+}
+#Belly{
+    background-image: url(../img/chocolade_fotos/pralines5.jpg);
+}
+#Buxia{
+    background-image: url(../img/chocolade_fotos/pralines6.jpg);
+}
+#Bathory{
+    background-image: url(../img/chocolade_fotos/pralines_doos.jpg);
+}
+#Buffy{
+    background-image: url(../img/chocolade_fotos/pralines_doos2.jpg);
 }
 
-.pralines_box:hover>.praline_overlay {
-    transform: translateX(0);
+.pralines_box:hover > .praline_overlay {
+  transform: translateX(0);
 }
 
 .praline_overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 3rem;
-    background-color: rgba(4, 34, 191, 0.4);
-    color: var(--kleur_wit);
-    transform: translateX(100%);
-    transition: transform 0.3s linear;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  background-color: rgba(4, 34, 191, 0.4);
+  color: var(--kleur_wit);
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
 }
 
 .praline_overlay h4 {
-    font-size: 3rem;
-    font-weight: 100;
-    text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
 }
-
-
-
-
-
 
 /*
     Contact Pagina
@@ -432,13 +450,13 @@ transition: transform 0.3s linear;
     Socials: Les 9 - Vormen als masker
 */
 .clearfix {
-    content: "";
-    clear: both;
+  content: "";
+  clear: both;
 }
 
 footer {
-    background-color: var(--kleur_blauw);
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+  background-color: var(--kleur_blauw);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }

@@ -1,108 +1,104 @@
 <!DOCTYPE html>
 <html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Magisch, chocolade, Antoine, Magiërs" />
+    <meta name="description" content="Antoine, Magische Chocolade" />
+    <meta name="author" content="Bart Victor Loots" />
+    <title>Contacteer ons</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Magisch, chocolade, Antoine, Magiërs">
-  <meta name="description" content="Antoine, Magische Chocolade">
-  <meta name="author" content="Bart Victor Loots">
-  <title>Contacteer ons</title>
-  <link href="css/style.css" type="text/css" rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <div id="header_content">
+        <img
+          src="img/magier_logo2.png"
+          alt="Antoine Logo"
+          title="Antoine Logo"
+          width="660"
+          height="371"
+        />
+        <div id="nav">
+          <div id="nav_links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<body>
-  <header>
+    <div id="mainContent">
+      <h1>Contact</h1>
+      <p>
+        Address Fantasialaan 1 <br />
+        1185 Zeverghem <br />
+        <br />
+        Phone +32-(0)20-643-9358 <br />
+        Fax +32-(0)20-643-9358 <br />
+        <br />
+        E-mail info@antoinechocolade.be <br />
+        Website www.antoinechocolade.be
+      </p>
 
-    <div id="blend_mode_container" title="Wich spell would you like to cast?">
-      <h5>Spellbook</h5>
-      <form>
-        <select id="color" class="blends">
-          <option value="normal">Normal</option>
-          <option value="darken">Darken</option>
-          <option value="multiply">Multiply</option>
-          <option value="screen">Screen</option>
-          <option value="color">Color</option>
-          <option value="color-burn">Color Burn</option>
-          <option value="color-dodge">Color Dodge</option>
-          <option value="overlay">Overlay</option>
-          <option value="soft-light">Soft Light</option>
-          <option value="hard-light">Hard Light</option>
-          <option value="difference">Difference</option>
-          <option value="exclusion">Exclusion</option>
-          <option value="hue">Hue</option>
-          <option value="saturation">Saturation</option>
-          <option value="lighten">Lighten</option>
-          <option value="luminosity">Luminosity</option>
-        </select>
+      <iframe
+        width="425"
+        height="350"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"
+      ></iframe
+      ><br /><small
+        ><a
+          href="http://maps.google.be/maps?f=q&amp;source=embed&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m"
+          style="color: #0000ff; text-align: left"
+          >Grotere kaart weergeven</a
+        ></small
+      >
+
+      <form method="post" action="contactengine.php">
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" id="Name" />
+
+        <label for="City">City:</label>
+        <input type="text" name="City" id="City" />
+
+        <label for="Email">Email:</label>
+        <input type="text" name="Email" id="Email" />
+
+        <label for="Message">Message:</label><br />
+        <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+        <input
+          type="submit"
+          name="submit"
+          value="Submit"
+          class="submit-button"
+        />
       </form>
     </div>
-    <img src="img/magier_logo2.png" alt="Antoine Logo" title="Antoine Logo" width="660" height="371">
-    <div id="nav">
-      <div id="nav_links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About us</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </header>
 
-  <div id="mainContent">
-    <h1>Contact</h1>
-    <p>Address Fantasialaan 1 <br>
-      1185 Zeverghem <br>
-      <br>
-      Phone +32-(0)20-643-9358 <br>
-      Fax +32-(0)20-643-9358 <br>
-      <br>
-      E-mail info@antoinechocolade.be <br>
-      Website www.antoinechocolade.be
-    </p>
-
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-      src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a
-        href="http://maps.google.be/maps?f=q&amp;source=embed&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m"
-        style="color:#0000FF;text-align:left">Grotere kaart weergeven</a></small>
-
-    <form method="post" action="contactengine.php">
-      <label for="Name">Name:</label>
-      <input type="text" name="Name" id="Name" />
-
-      <label for="City">City:</label>
-      <input type="text" name="City" id="City" />
-
-      <label for="Email">Email:</label>
-      <input type="text" name="Email" id="Email" />
-
-      <label for="Message">Message:</label><br />
-      <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
-
-      <input type="submit" name="submit" value="Submit" class="submit-button" />
-    </form>
-
-
-
-  </div>
-
-
-  <footer>
-    <h6>Vind ons</h6>
-    <p>Address Fantasialaan 1 <br>
-      1185 Zeverghem Belgium <br>
-      <br>
-      Phone +32-(0)20-643-9358 <br>
-      Fax +32-(0)20-643-9358 <br>
-      <br>
-      E-mail info@antoinechocolade.be <br>
-      Website www.antoinechocolade.be
-    </p>
-    <p>Facebook: https://www.facebook.com/pages/Antoine-Chocolates</p>
-    <p>Twitter: https://twitter.com/pages/Antoine-Chocolates</p>
-    <p> Copyright, Victor Loots &copy; 2023</p>
-  </footer>
-
-</body>
-
+    <footer>
+      <h6>Vind ons</h6>
+      <p>
+        Address Fantasialaan 1 <br />
+        1185 Zeverghem Belgium <br />
+        <br />
+        Phone +32-(0)20-643-9358 <br />
+        Fax +32-(0)20-643-9358 <br />
+        <br />
+        E-mail info@antoinechocolade.be <br />
+        Website www.antoinechocolade.be
+      </p>
+      <p>Facebook: https://www.facebook.com/pages/Antoine-Chocolates</p>
+      <p>Twitter: https://twitter.com/pages/Antoine-Chocolates</p>
+      <p>Copyright, Victor Loots &copy; 2023</p>
+    </footer>
+  </body>
 </html>
