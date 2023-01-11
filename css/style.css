@@ -124,7 +124,8 @@ ul {
     Algemeen
     Les 5 - Typo 
     les 8 - Teksten stijlen
-    h1: Les 9 - Teksten als masker
+  
+    Algemeen Design: Les 3 - CSS effecten
 */
 
 /*
@@ -141,11 +142,16 @@ header {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+#header_content,
+#footer_content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #header_content {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 header img {
@@ -322,23 +328,39 @@ header img {
 }
 
 #spellbook_container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 500px;
   height: 391px;
-  margin: 0 auto;
+  margin: 1rem auto 5rem auto;
+}
+
+#blend_mode_container {
+  position: relative;
+}
+
+#blend_mode_container::after {
+  position: absolute;
+  top: -89px;
+  left: -148px;
+  content: "";
+  display: block;
+  width: 500px;
+  height: 250px;
   background-image: url(../img/open_spellbook.png);
   background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: contain;
+  z-index: -1;
+
 }
 
 select {
   font-family: var(--font_teksten);
   padding: 0.5rem;
   height: 50px;
-  width: 250px;
+  width: 200px;
   font-size: 3rem;
   text-align: center;
   border-radius: 0.8rem;
@@ -491,91 +513,113 @@ select {
 /*
     Contact Pagina
     les 5 - Fontello icons
+    h1: Les 9 - Teksten als masker
 */
 
 /*
     Footer
-    Algemeen Design: Les 3 - CSS effecten
     adres: Les 9 - Vormen als masker
 */
 .clearfix {
   content: "";
   clear: both;
 }
-footer, #footer_contact, #footer_socials, #footer_bottom{
+
+footer,
+#footer_contact,
+#footer_socials,
+#footer_bottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;}
+  width: 100%;
+}
 
 footer {
-  background: linear-gradient(135deg, #0422bf 0%,#364ecb 10%,#687ad8 20%,#9aa6e5 30%,#ccd2f2 40%,#ffffff 50%,#ccd2f2 60%,#9aa6e5 70%,#687ad8 80%,#364ecb 90%,#0422bf 100%);
+  background: linear-gradient(135deg, #0422bf 0%, #364ecb 10%, #687ad8 20%, #9aa6e5 30%, #ccd2f2 40%, #ffffff 50%, #ccd2f2 60%, #9aa6e5 70%, #687ad8 80%, #364ecb 90%, #0422bf 100%);
+  border-top: var(--kleur_blauw) outset 1rem;
 }
-#footer_contact{
-   padding: 2rem 2rem 2rem 5rem;
+
+#footer_contact {
+  padding: 2rem 2rem 2rem 5rem;
 }
+
 .break {
   flex-basis: 100%;
   height: 0;
 }
-#footer_adress, #footer_phone, #footer_links{
+
+#footer_adress,
+#footer_phone,
+#footer_links {
   position: relative;
- margin: 20rem 0 2rem 0;
+  margin: 20rem 0 2rem 0;
 }
 
-#footer_adress::before{
+#footer_adress::before,
+#footer_phone::before,
+#footer_links::before {
   content: "";
   position: absolute;
-  top: -150px;
-  left: -35px;
+  top: -200px;
   display: block;
   width: 200px;
   height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+#footer_adress::before {
+  left: -24.33px;
   background-image: url(../img/chocolade_fotos/winkel_voorkant.png);
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+
+}
+
+#footer_phone::before {
+  left: 3.775px;
+  background-image: url(../img/chocolade_fotos/winkel_telefoon.jpg);
+  clip-path: polygon(50% 0%, 61% 30%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 30%);
+}
+
+#footer_links::before {
+  left: 30.74px;
+  background-image: url(../img/chocolade_fotos/winkel_mail.jpg);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
+}
+
+
+.logo_social, .crystal_divider {
+  position: relative;
+  display: block;
+  
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  clip-path: polygon(50% 0%, 61% 30%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 30%);
-  opacity: 0.5;
+ 
 }
-#footer_phone::before{
-  content: "";
-  position: absolute;
-  top: -186px;
-  left: 6px;
-  display: block;
-  width: 200px;
-  height: 200px;
-  background-image: url(../img/chocolade_fotos/winkel_telefoon.jpg);
-  background-position: bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  opacity: 0.5;
-
+.crystal_divider{
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/arcane_crystal4.png);
+  margin-top: 25px;
 }
 
-#footer_bottom{
-
-  padding: 2rem 0 5rem 0;
-  
-  
-}
 .logo_social{
-  position: relative;
-  display: block;
   width: 150px;
   height: 150px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   transform: scale(0.7);
   transition: transform 0.1s linear;
 }
-.logo_social:hover{
+
+.logo_social:hover {
   transform: scale(1);
 }
-.logo_social::after{
+
+.logo_social::after {
   position: absolute;
   top: -25px;
   left: -25px;
@@ -589,15 +633,23 @@ footer {
   opacity: 0;
   transition: opacity 0.25s linear;
 }
-.logo_social:hover::after{
+
+.logo_social:hover::after {
   opacity: 0.5;
 }
-#toverbook{
+
+#toverbook {
   background-image: url(../img/magiers_socials_toverbook.png);
 }
-#tovergram{
+
+#tovergram {
   background-image: url(../img/magiers_socials_tovergram.png);
 }
-#magica_datum{
+
+#magica_datum {
   background-image: url(../img/magiers_socials_magica-daticum.png);
+}
+
+#footer_bottom {
+  padding: 2rem 0 5rem 0;
 }
