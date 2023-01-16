@@ -136,7 +136,7 @@ ul {
 header {
 
   margin-bottom: 5rem;
-  border-bottom: var(--kleur_blauw) outset 1rem;
+  border-bottom: var(--kleur_blauw) ridge 1rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -179,7 +179,7 @@ header img {
 
 #nav_links a {
   display: block;
-  width: 400px;
+  width: 450px;
   height: auto;
   border: var(--kleur_blauw) inset 0.5rem;
   outline: var(--kleur_blauw) outset 0.5rem;
@@ -194,11 +194,12 @@ header img {
   font-weight: 700;
   text-align: center;
   padding: 1rem;
+  transition: background 0.1s linear;
 }
 
 #nav_links a:nth-of-type(1) {
   background: url(../img/arcane_circle.png), url(../img/arcane_circle.png);
-  background-position: 0%, 100%;
+  background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
@@ -212,14 +213,14 @@ header img {
 
 #nav_links a:nth-of-type(3) {
   background: url(../img/arcane_circle3.png), url(../img/arcane_circle3.png);
-  background-position: 10%, 90%;
+  background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(4) {
   background: url(../img/arcane_circle4.png), url(../img/arcane_circle4.png);
-  background-position: 15%, 85%;
+  background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
@@ -227,8 +228,8 @@ header img {
 #nav_links a:hover {
   font-size: 4.5rem;
   color: #4f64d2;
-  background: url(../img/arcane_effect2.png), url(../img/arcane_effect2.png);
-  background-position: 10%, 90%;
+  background: url(../img/arcane_effect2.png), url(../img/arcane_effect2_inversed.png);
+  background-position: 5%, 95%;
   background-size: contain, contain;
   background-repeat: no-repeat;
 }
@@ -240,8 +241,165 @@ header img {
 
 /*
     Index Pagina
-    Tweede menu: Les 2 - Positioning
 */
+
+#flying_dragon {}
+
+#title_container {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/chocolat_pattern.jpg);
+  overflow: hidden;
+
+}
+
+#title_container h1 {
+  font-size: 15rem;
+  text-shadow: none;
+  color: var(--kleur_wit);
+
+}
+
+#title_container span {
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  height: 225px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+#title_container span:hover {
+  cursor: pointer;
+
+}
+
+#title_container span:hover::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: -37.5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#letter_A:hover::before {
+  background-image: url(../img/title/letter_A.png);
+}
+
+#letter_N1:hover::before,
+#letter_N2:hover::before {
+  background-image: url(../img/title/letter_N.png);
+}
+
+#letter_T:hover::before {
+  background-image: url(../img/title/letter_T.png);
+}
+
+#letter_O:hover::before {
+  background-image: url(../img/title/letter_O.png);
+}
+
+#letter_I:hover::before {
+  background-image: url(../img/title/letter_I.png);
+}
+
+#letter_E:hover::before {
+  background-image: url(../img/title/letter_E.png);
+}
+
+#title_container span:hover::after {
+  content: "";
+  display: block;
+  width: 440px;
+  height: 416px;
+  position: absolute;
+  top: -106px;
+  left: -154.5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/arcane_circle2.png);
+  z-index: -2;
+  animation: circleSpin 10s linear forwards;
+  transition: transform 0.1s linear;
+}
+
+@keyframes circleSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.letter {
+  transform: rotateY(0deg);
+  transition: transform 0.3s linear;
+}
+
+@keyframes letterRoll {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  0% {
+    transform: rotateY(-180deg);
+  }
+
+}
+
+#index_pagina {
+  position: relative;
+  min-height: 100vh;
+}
+
+#intro_quote blockquote {
+  display: block;
+  width: 600px;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  font-size: 10rem;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  left: -238px;
+  top: -44px;
+  display: block;
+  width: 315px;
+  height: 400px;
+  background-image: url(../img/magic_wand.png);
+}
+
+
+#intro_nav {
+  display: block;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+
+strong {
+  color: var(--kleur_blauw);
+  font-size: 10.2rem;
+}
 
 /*
     About Pagina
@@ -537,7 +695,10 @@ footer,
 
 footer {
   background: linear-gradient(135deg, #0422bf 0%, #364ecb 10%, #687ad8 20%, #9aa6e5 30%, #ccd2f2 40%, #ffffff 50%, #ccd2f2 60%, #9aa6e5 70%, #687ad8 80%, #364ecb 90%, #0422bf 100%);
-  border-top: var(--kleur_blauw) outset 1rem;
+  border-top: var(--kleur_blauw) ridge 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px,
+    rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -16px 8px,
+    rgba(0, 0, 0, 0.09) 0px -32px 16px;
 }
 
 #footer_contact {
@@ -549,10 +710,34 @@ footer {
   height: 0;
 }
 
+#footer_contact h4 {
+  padding: 1rem 0;
+}
+
+#footer_contact {
+  text-align: center;
+}
+
+#footer_contact a {
+  text-decoration: none;
+  color: var(--kleur_zwart);
+}
+
+#footer_contact a:hover {
+  font-size: 2.5rem;
+  color: var(--kleur_wit);
+  background-color: var(--kleur_zwart);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
 #footer_adress,
 #footer_phone,
 #footer_links {
   position: relative;
+  display: block;
+  width: 250px;
+  height: auto;
   margin: 20rem 0 2rem 0;
 }
 
@@ -562,6 +747,7 @@ footer {
   content: "";
   position: absolute;
   top: -200px;
+  left: 25px;
   display: block;
   width: 200px;
   height: 200px;
@@ -572,43 +758,44 @@ footer {
 }
 
 #footer_adress::before {
-  left: -24.33px;
   background-image: url(../img/chocolade_fotos/winkel_voorkant.png);
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 
 }
 
 #footer_phone::before {
-  left: 3.775px;
+
   background-image: url(../img/chocolade_fotos/winkel_telefoon.jpg);
   clip-path: polygon(50% 0%, 61% 30%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 30%);
 }
 
 #footer_links::before {
-  left: 30.74px;
+
   background-image: url(../img/chocolade_fotos/winkel_mail.jpg);
   clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 
 }
 
 
-.logo_social, .crystal_divider {
+.logo_social,
+.crystal_divider {
   position: relative;
   display: block;
-  
+
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
- 
+
 }
-.crystal_divider{
+
+.crystal_divider {
   width: 100px;
   height: 100px;
   background-image: url(../img/arcane_crystal4.png);
   margin-top: 25px;
 }
 
-.logo_social{
+.logo_social {
   width: 150px;
   height: 150px;
   transform: scale(0.7);

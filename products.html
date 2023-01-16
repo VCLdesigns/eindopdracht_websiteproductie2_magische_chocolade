@@ -19,17 +19,17 @@
       <img src="img/magier_logo2.png" alt="Antoine Logo" title="Antoine Logo" width="660" height="371" />
       <div id="nav">
         <div id="nav_links">
-          <a href="index.html">Home</a>
-          <a href="products.html">Products</a>
-          <a href="about.html">About us</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html">Domum</a>
+          <a href="products.html">Scelerisque</a>
+          <a href="about.html">De Nobis</a>
+          <a href="contact.html">Communicare</a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <h1>Our Products</h1>
+    <h1>Scelerisque</h1>
     <div id="spellbook_container">
       <h5>Guarantied to tickle your fancy.</h6>
         <div class="break"></div>
@@ -217,24 +217,29 @@
   <footer class="clearfix">
     <div id="footer_content">
       <div id="footer_contact">
-        <h6>Vind ons</h6>
+        <h4>Invenire Nobis</h4>
         <div class="break"></div>
-        <p id="footer_adress">
-          Wizard's Guild 7 <sup>3</sup>&frasl;<sub>4</sub> <br />
-          4141 Toverghem <br>
-          Spellacrea
-        </p>
-        <p id="footer_phone">
-          <a href="tel:32206439358">Phone</a> +32-(0)20-643-9358 <br />
-          <a href="tel:32206439358"> Fax</a> +32-(0)20-643-9358
-        </p>
-        <p id="footer_links">
-          E-mail info@antoinechocolade.be <br />
-          Website www.antoinechocolade.be
-        </p>
+        <div id="footer_adress">
+          <h5>Officina</h5>
+          <p>
+            Wizard's Guild 7 <sup>3</sup>&frasl;<sub>4</sub> <br />
+            4141 Toverghem <br>
+            Spellacrea
+          </p>
+        </div>
+
+        <div id="footer_phone">
+          <h5>Invocare</h5>
+          <a href="tel:32206439358">+32-(0)20-643-9358</a>
+
+        </div>
+        <div id="footer_links">
+          <h5>Tabella</h5>
+          <a href="contact.html#form_container">info@antoinechocolade.be</a>
+        </div>
       </div>
       <div id="footer_socials">
-        <h6>Find us</h6>
+        <h5>Socialis Iudicium</h5>
         <div class="break"></div>
         <a href="https://www.toverbook.com/pages/Antoine-Chocolates" target="_blank">
           <div id="toverbook" class="logo_social"></div>
@@ -262,7 +267,24 @@
       itemselector: ".grid-item"
     });
   </script>
-  <script src="js/main.js"></script>
+  <script>var alleImages = document.querySelectorAll(".background");
+    var form = document.querySelector("form");
+    var updateBlendMode = () => {
+      var selection = document.querySelector(".blends").value;
+      for (var i = 0; i < alleImages.length; i++) {
+        alleImages[i].style.backgroundBlendMode = selection;
+      }
+    };
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+
+    form.addEventListener("change", () => {
+      updateBlendMode();
+    });
+
+    updateBlendMode();</script>
 </body>
 
 </html>
