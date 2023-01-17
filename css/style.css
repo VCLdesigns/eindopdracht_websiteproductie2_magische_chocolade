@@ -120,17 +120,10 @@ ul {
   list-style: none;
 }
 
-/*
-    Algemeen
-    Les 5 - Typo 
-    les 8 - Teksten stijlen
-  
-    Algemeen Design: Les 3 - CSS effecten
-*/
 
 /*
     Menu
-    Les 6 - Multiple Backgrounds
+
 */
 
 header {
@@ -243,7 +236,6 @@ header img {
     Index Pagina
 */
 
-#flying_dragon {}
 
 #title_container {
   height: 98vh;
@@ -403,15 +395,87 @@ strong {
 
 /*
     About Pagina
-    Alle h's: Les 4 - ::before & :: after
 
 */
+.brood_font {
+  font-family: var(--font_teksten);
+}
+
+#about_page p::first-letter {
+  float: left;
+  font-size: 7rem;
+  line-height: 6rem;
+  padding: 0.4rem 0.8rem 0 0.3rem;
+  color: var(--kleur_blauw);
+}
+
+#about_page h2 {
+  padding: 3rem 0;
+}
+
+#about_page h3 {
+  padding: 2rem 0;
+}
+
+#about_page h4 {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+#about_page p {
+  padding: 1rem 0;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.columns {
+  columns: 3;
+  margin-bottom: 5rem;
+}
+
+.columns .column_item {
+  break-inside: avoid;
+}
+
+#section_quality h4,
+.section_history h4,
+#section_primes h4 {
+  position: relative;
+}
+
+#section_quality h4::before,
+.section_history h4::before,
+#section_primes h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#section_quality h4::before {
+  background-image: url(../img/potion1.png);
+}
+
+.section_history h4::before {
+  background-image: url(../img/potion2.png);
+}
+
+#section_primes h4::before {
+  background-image: url(../img/potion3.png);
+}
+
 
 /*
     Producten Pagina 
-    Kunst: Les 1 - Flex-box 
-     Les 9 - Mix blend mode ->Toverspreuk-knop
-    Pralines: Les 7 - Masonry + Les 9 - Filters
 */
 
 #chocolade_kunst_container {
@@ -676,7 +740,7 @@ select {
 
 /*
     Footer
-    adres: Les 9 - Vormen als masker
+
 */
 .clearfix {
   content: "";
