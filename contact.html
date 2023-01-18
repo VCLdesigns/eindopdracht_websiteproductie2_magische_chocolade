@@ -28,35 +28,37 @@
   </header>
 
   <main>
-
-
-
-    <div class="break"></div>
-    <div id="footer_adress">
-      <h5>Officina</h5>
+    <div id="contact_adress">
+      <h5><span class=" icon-home"> </span> Officina <span class=" icon-star"></span></h5>
+      <img id="winkel_voorkant" src="img/chocolade_fotos/winkel_voorkant.png" alt="Picture of our store"
+        title="Our Store" width="400" height="373">
       <p>
         Wizard's Guild 7 <sup>3</sup>&frasl;<sub>4</sub> <br />
         4141 Toverghem <br>
         Spellacrea
       </p>
-      <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a
-          href="http://maps.google.be/maps?f=q&amp;source=embed&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m"
-          style="color: #0000ff; text-align: left">Grotere kaart weergeven</a></small>
+      <img id="winkel_toog" src="img/chocolade_fotos/winkel_toog.jpg" alt="Picture of our store" title="Our Store"
+        width="400" height="300">
+      <iframe width="400" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Chocolatier+Guy+Pas,+Herentalsstraat,+Turnhout,+Antwerpen&amp;aq=4&amp;oq=antwerpen+choco&amp;sll=50.805935,4.432983&amp;sspn=3.957791,9.18457&amp;ie=UTF8&amp;hq=Chocolatier+Guy+Pas,&amp;hnear=Herentalsstraat,+2300+Turnhout,+Antwerpen,+Vlaams+Gewest&amp;ll=51.321668,4.949072&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe>
     </div>
 
-    <div>
-      <h5>Invocare</h5>
-      <a href="tel:32206439358">+32-(0)20-643-9358</a>
+    <div id="contact_contact">
+      <div>
+        <span class=" icon-phone"></span>
+        <h5>Invocare</h5>
+        <a href="tel:32206439358">+32-(0)20-643-9358</a>
+      </div>
+      <div>
+        <span class=" icon-mail-alt"></span>
+        <h5>Tabella</h5>
+        <a href="contact.html#form_container">info@antoinechocolade.be</a>
+      </div>
     </div>
 
-    <div>
-      <h5>Tabella</h5>
-      <a href="contact.html#form_container">info@antoinechocolade.be</a>
-    </div>
-
-    <div>
-      <h5>Socialis Iudicium</h5>
+    <div id="contact_socials">
+      <h5><span class=" icon-theatre"></span> Socialis Iudicium <span class=" icon-king"></span></h5>
+      <div class="break"></div>
       <div class="break"></div>
       <a href="https://www.toverbook.com/pages/Antoine-Chocolates" target="_blank">
         <div id="toverbook" class="logo_social"></div>
@@ -76,13 +78,13 @@
 
     <div id="form_container">
       <form method="post" action="contactengine.php">
-        <label for="Name">Name:</label>
+        <label for="Name"><span class=" icon-adult"> </span>Name:</label>
         <input type="text" name="Name" id="Name" />
-        <label for="City">City:</label>
+        <label for="City"> <span class=" icon-town-hall"> </span>City:</label>
         <input type="text" name="City" id="City" />
-        <label for="Email">Email:</label>
+        <label for="Email"><span class=" icon-mail-alt"> </span> Email:</label>
         <input type="text" name="Email" id="Email" />
-        <label for="Message">Message:</label><br />
+        <label for="Message"><span class=" icon-feather"> </span> Message:</label><br />
         <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
         <input type="submit" name="submit" value="Submit" class="submit-button" />
       </form>
