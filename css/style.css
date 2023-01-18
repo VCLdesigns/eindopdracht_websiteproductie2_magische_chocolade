@@ -62,7 +62,7 @@ body {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 5rem;
+  padding: 5rem 0 10rem 0;
 }
 
 h1,
@@ -93,6 +93,26 @@ h1 {
 h2 {
   font-size: 6rem;
   text-align: center;
+  font-weight: 600;
+  background-image: url(../img/title/background.png);
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2:first-of-type {
+  background-position: top left;
+}
+
+h2:nth-of-type(2) {
+  background-position: center center;
+}
+
+h2:last-of-type {
+  background-position: bottom right;
 }
 
 h3 {
@@ -489,17 +509,45 @@ strong {
   padding: 3rem 0;
 }
 
+#about_page section {
+  margin-bottom: 10rem;
+}
+
 #about_page h3 {
   padding: 2rem 0;
+  background-color: var(--kleur_blauw);
+  background-image: linear-gradient(135deg, #7db9e8 0%, #207cca 50%, #2989d8 51%, #0422bf 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 #about_page h4 {
   padding: 1.5rem 0;
+  background-color: var(--kleur_blauw);
+  background-image: linear-gradient(135deg, #0422bf 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 #about_page p {
   padding: 1rem 0;
 }
+
+#about_page img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  place-self: center;
+}
+
 
 #grid {
   display: grid;
@@ -526,8 +574,12 @@ strong {
   position: relative;
 }
 
+.section_history h4 {
+  text-align: right;
+}
+
 #section_quality h4::before,
-.section_history h4::after,
+.section_history h4::before,
 #section_primes h4::after {
   content: "";
   position: absolute;
@@ -539,11 +591,12 @@ strong {
   background-repeat: no-repeat;
 }
 
+.section_history h4::before,
 #section_quality h4::before {
   left: 0;
 }
 
-.section_history h4::after,
+
 #section_primes h4::after {
   right: 0;
 }
@@ -552,7 +605,7 @@ strong {
   background-image: url(../img/potion1.png);
 }
 
-.section_history h4::after {
+.section_history h4::before {
   background-image: url(../img/potion2.png);
 }
 
@@ -564,16 +617,43 @@ strong {
   grid-area: 1/1/2/7;
 }
 
+#about_wizard {
+  grid-area: 1/7/2/13;
+
+}
+
+#about_wizard,
+#hip_boots {
+  transform: scaleX(-1);
+}
+
 #grid section:nth-of-type(2) {
   grid-area: 2/7/3/13;
+}
+
+#alchemy_tafel {
+  grid-area: 2/1/3/7;
+}
+
+#alchemy_tafel,
+#hoard_gold {
+  border-radius: 1rem;
 }
 
 #grid section:nth-of-type(3) {
   grid-area: 3/1/4/7;
 }
 
+#hip_boots {
+  grid-area: 3/7/4/13;
+}
+
 #grid section:nth-of-type(4) {
   grid-area: 4/7/5/13;
+}
+
+#hoard_gold {
+  grid-area: 4/1/5/7;
 }
 
 /*
