@@ -171,7 +171,6 @@ h2 {
   font-weight: 600;
   background-image: url(../img/title/background.png);
   background-repeat: repeat;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -993,7 +992,11 @@ select {
     Contact Pagina
 
 */
-#contact_adress img {
+#contact_page h5 {
+  text-align: center;
+}
+
+#contact_page img {
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -1008,13 +1011,14 @@ select {
 }
 
 #contact_adress,
-#contact_contact {
+#contact_contact,
+#contact_socials,
+#form_container {
   margin-bottom: 10rem;
 }
 
 #contact_adress h5 {
   grid-area: 1/1/2/7;
-  text-align: center;
 }
 
 #winkel_voorkant {
@@ -1052,12 +1056,40 @@ select {
 }
 
 #form_container {
-  border-radius: 5px;
-  padding: 2rem;
+  position: relative;
   font-family: var(--font_subtitel);
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
+
+#form_container::before,
+#form_container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 800px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+#form_container::before {
+  left: -347px;
+  top: 122px;
+  background-image: url(../img/wizard1.png);
+}
+
+#form_container::after {
+  right: -327px;
+  top: 160px;
+  background-image: url(../img/wizard2.png);
+
+}
+
+
 
 input[type="text"],
 input[type="email"],
@@ -1070,20 +1102,13 @@ textarea {
   resize: vertical;
 }
 
-input::-webkit-input-placeholder {
-  font-family: var(--font_teksten);
-}
 
-input::-webkit-input-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder,
-input::-ms-input-placeholder,
 input::placeholder {
   font-family: var(--font_teksten);
 }
 
 input[type="submit"] {
-  background-color: var(--kleur_rood);
+  background-color: var(--kleur_blauw);
   color: var(--kleur_wit);
   padding: 1rem 2rem;
   border: none;
@@ -1092,7 +1117,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(157, 0, 24);
+  background-color: #2989d8;
 }
 
 /*
@@ -1139,12 +1164,14 @@ footer {
   text-align: center;
 }
 
-#footer_contact a {
+#footer_contact a,
+#contact_contact a {
   text-decoration: none;
   color: var(--kleur_zwart);
 }
 
-#footer_contact a:hover {
+#footer_contact a:hover,
+#contact_contact a:hover {
   font-size: 2.5rem;
   color: var(--kleur_wit);
   background-color: var(--kleur_zwart);
@@ -1240,6 +1267,7 @@ footer {
   background-size: contain;
   opacity: 0;
   transition: opacity 0.25s linear;
+
 }
 
 .logo_social:hover::after {
